@@ -1,0 +1,26 @@
+{
+  "name": "new_year",
+  "version": "1.0.0",
+  "description": "Nuevo Año 2019",
+  "main": "./assets/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/calypsobronte/new_year.git"
+  },
+  "keywords": [
+    "coder",
+    "new",
+    "year",
+    "2019",
+    "women"
+  ],
+  "author": "Calypso Bronte",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/calypsobronte/new_year/issues"
+  },
+  "homepage": "https://github.com/calypsobronte/new_year#readme"
+}

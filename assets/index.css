@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:700|Pacifico');
+
+*, *:after, *:before{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+  -webkit-transition: all 100ms ease-in;
+  transition: all 100ms ease-in;
+}
+html{
+	background: #050404;
+}
+
+.ano_nuevo{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  padding: 200px 100px 0px 0px;
+}
+
+.ano_nuevo>span{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 175px;
+  font-weight: 700;
+  color: #7a8fe8;
+}
+span.ocho{
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  margin-right: -200px;
+  animation: viejo_2018 5s ease-in-out 5s forwards;
+}
+span.nueve{
+  position: absolute;
+  right: 0%;
+  margin-right: -200px;
+  animation: nuevo_2019 6s ease-in-out forwards;
+}
+span.nueve:before{
+  content: '';
+  width: 0px;
+  height: 6px;
+  display: block;
+  border-radius: 3px;
+  background: #7a8fe8;
+  transform: rotate(0deg);
+  transform-origin: left top;
+  position: absolute;
+  top: 55px;
+  left: 10px;
+  z-index: -1;
+  animation: entrega_globo 1s ease-in-out 4s;
+}
+.globo{
+  width: 100px;
+  height: 100px;
+  display: block;
+  background: #e8d57a;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  margin-top: -165px;
+  right: 0%;
+  margin-right: -200px;
+  animation: globo_volar 10s ease-in-out forwards;
+}
+.globo:before{
+  content: '';
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 10px 20px 10px;
+  border-color: transparent transparent #b19b32 transparent;
+  position: absolute;
+  left: 50%;
+  margin-left: -10px;
+  bottom: -10px;
+  z-index: -1;
+}
+.globo:after{
+  content: '';
+  width: 4px;
+  height: 100px;
+  display: block;
+  background: #fff;
+  border-radius: 0px 0px 3px 3px;
+  position: absolute;
+  left: 50%;
+  margin-left: -2px;
+  bottom: -110px;
+}
+@keyframes nuevo_2019 {
+  0% {
+    right: 0%;
+  }
+  66.6666% {
+    right: 50%;
+    margin-right: -300px;
+  }
+  90% {
+    right: 50%;
+    margin-right: -300px;
+  }
+  100% {
+    right: 50%;
+  }
+}
+@keyframes globo_volar {
+  0% {
+    right: 0%;
+  }
+  40% {
+    right: 50%;
+    margin-right: -300px;
+  }
+  50% {
+    right: 50%;
+    margin-right: -200px;
+    top: 50%;
+  }
+  100% {
+    top: -100%;
+    right: 50%;
+  }
+}
+@keyframes entrega_globo {
+  0% {
+    transform: rotate(-30deg);
+    width: 40px;
+  }
+  100% {
+    transform: rotate(-150deg);
+    width: 70px;
+  }
+}
+@keyframes viejo_2018 {
+  0% {
+    top: 50%;
+  }
+  100% {
+    top: -100%;
+  }
+}
+
+a.calypso_bronte{
+  font-size: 12px;
+  text-decoration: none;
+  color: #f47c7c;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+}
+
+/*Conteo*/
+.nuevo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  user-select: none;
+}
+
+.letra {
+  font-size: 2.2rem;
+  background: url("https://res.cloudinary.com/dondigidon9/image/upload/v1544906837/stripe_c982eebe592d6c30f2034f5ce80b1fc6.png");
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: movimientoLetra 30s linear infinite;
+}
+
+@keyframes movimientoLetra {
+  0% {
+    background-position: 0% 30%;
+  }
+  100% {
+    background-position: 1000% 500%;
+  }
+}
+
+.tiempo {
+  color: #d99c3b;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+}
+
+.tiempo span {
+  padding: 0 14px;
+  font-size: 0.8rem;
+}
+
+.tiempo span div {
+  font-size: 3rem;
+}
+
+@media (max-width: 740px) {
+  .letra {
+    font-size: 1.7rem;
+  }
+  .tiempo span {
+    padding: 0 16px;
+    font-size: 0.6rem;
+  }
+  .tiempo span div {
+    font-size: 2rem;
+  }
+}
